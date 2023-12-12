@@ -7,10 +7,15 @@
   <title>CardGame</title>
   <link rel="stylesheet" href="./css/bootstrap.css">
   <style>
+    body {
+      background-image: url(./cards/background.jpg);
+
+    }
+
     .card {
       width: 100%;
-      height: 100%;
-      display: inline-block;
+      height: 68%;
+      /* display: inline-block; */
       /* position: relative; */
       /* float: left; */
       /* 設定子元素在 3D 空間內 */
@@ -20,11 +25,11 @@
 
     .card {
       position: relative;
-      /* display: flex; */
+      display: flex;
       flex-direction: column;
       min-width: 0;
       word-wrap: break-word;
-      background-color: black;
+      background-color: rgba(255, 255, 255, 0);
       background-clip: border-box;
       border: 0px solid rgba(0, 0, 0, 0.125);
       margin: 4px;
@@ -35,13 +40,12 @@
       width: 100%;
       height: 100%;
       background-image: url(./cards/1.png);
-      background-size: 200% 200%;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       position: absolute;
       /* 隱藏背面 */
       backface-visibility: hidden;
-
     }
 
     /* 背面 */
@@ -77,16 +81,23 @@
       background-size: 100% 100%;
       background-repeat: no-repeat;
       font: bold 25px 微軟正黑體;
+    }
 
+    .p-4 {
+      display: none;
+    }
 
+    .p-4:first-child {
+      display: block;
     }
   </style>
 </head>
 
-<body class="d-flex flex-column align-items-center justify-content-center vh-100 ">
-  <div id="game" class="container d-flex flex-column align-items-center h-100 ">
-    <div id="top-row" class="d-flex justify-content-between w-100 align-items-center bg-danger h-35"></div>
-    <div id="middle" class="w-100 h-30 my-1">
+<body class="d-flex vh-100 bg-dark">
+  <div id="game" class="container d-flex flex-column align-items-center vh-100 ">
+    <div id="top-row" class="d-flex justify-content-between  align-items-center h-35 vw-100"></div>
+    <div id="middle" class="vw-100 h-30 ">
+      <div class="p-4 content0">連連看</div>
       <div class="p-4 content1">
         <h1>牡羊座（3月21日-4月19日）</h1>
         <p>
@@ -96,77 +107,75 @@
       <div class="p-4 content2">
         <h1>金牛座（4月20日-5月20日）</h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
-        </p>
-      </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
-        <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。
         </p>
       </div>
       <div class="p-4 content3">
         <h1>雙子座（5月21日-6月21日）</h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          雙子座聰明機智、多才多藝，他們擅長交際和表達，善於與人交流和溝通。然而，星座是雙子座的人有時候會過分表面化和缺乏深度，需要學習更好地專注和深入思考。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content4">
+        <h1>巨蟹座（6月22日-7月22日）/h1>
+          <p>
+            巨蟹座的人情感豐富、溫柔體貼，他們喜歡照顧和關心身邊的人。星座是巨蟹座的人通常具有很好的直覺和感悟力，能夠深入了解他人的情感和需求。然而，他們有時候會過分敏感和情緒化，需要學習更好地控制自己的情緒。
+          </p>
+      </div>
+      <div class="p-4 content5">
+        <h1>獅子座（7月23日-8月22日）</h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          獅子座自信而慷慨，他們追求成就和公眾關注，喜歡成為焦點。星座是獅子座的人具有強烈的領導能力和表現欲，善於激勵他人。然而，他們有時候會過分自我中心和驕傲，需要學習更好地尊重他人和合作。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content6">
+        <h1>處女座（8月23日-9月22日）</h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          處女座細心而完美主義，他們追求嚴謹和完美，喜歡事事都精益求精。星座是處女座的人通常具有很好的分析和解決問題能力，能夠做出明智的決策。然而，他們有時候會過分苛求自己和他人，需要學習更好地放寬心態和接受缺陷。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content7">
+        <h1>天秤座（9月23日-10月23日） </h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          天秤座優雅而和諧，他們喜歡平衡和諧的環境和關係。星座是天秤座的人通常具有很好的審美和社交能力，善於在不同的人群中交流和溝通。然而，他們有時候會過分優柔寡斷和缺乏主見，需要學習更好地表達自己和做出決策。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content8">
+        <h1>天蠍座（10月24日-11月21日）</h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          天蠍座神秘而熱情，他們充滿強烈的情感和直覺力。星座是天蠍座的人通常非常有自信和魅力，能夠吸引他人的注意力和信任。然而，他們有時候會過分佔有慾和控制欲，需要學習更好地尊重他人和平衡自己的情感。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content9">
+        <h1>射手座（11月22日-12月21日）</h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          射手座樂觀而自由，他們追求自由和冒險，喜歡探索新事物和新體驗。星座是射手座的人通常具有很好的幽默感和開放心態，能夠輕鬆面對生活中的挑戰。然而，他們有時候會過分冒失和不負責任，需要學習更好地關注他人的感受和責任。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content10">
+        <h1>摩羯座（12月22日-1月19日） </h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          摩羯座勤勉而堅毅，他們追求穩定和安全，喜歡有計劃地進行事情和達成目標。星座是摩羯座的人通常非常有責任感和紀律性，能夠堅持不懈地追求自己的夢想。然而，他們有時候會過分嚴肅和保守，需要學習更好地放鬆和享受生活。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content11">
+        <h1>水瓶座（1月20日-2月18日） </h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          水瓶座創意而獨立，他們喜歡思考和探索新的想法和方法。星座是水瓶座的人通常非常開放和進取，能夠不斷創新和改進。然而，他們有時候會過分獨立和固執，需要學習更好地與他人合作和溝通。
         </p>
       </div>
-      <div class="p-4 content2">
-        <h1>金牛座（4月20日-5月20日）</h1>
+      <div class="p-4 content12">
+        <h1>雙魚座（2月19日-3月20日）</h1>
         <p>
-          金牛座勤奮而穩重，他們追求實用性和現實主義。星座是金牛座的人通常非常有耐心和毅力，會一直堅持不懈地追求自己的目標。然而，他們有時候會過分固執和不易妥協，需要學習更好地接受新事物和觀念。 
+          雙魚座敏感而富有想象力，他們充滿著夢想和幻想。星座是雙魚座的人通常非常有同情心和創造力，能夠深刻地理解他人的感受和需要。然而，他們有時候會過分情緒化和沉迷於幻想，需要學習更好地面對現實和掌控自己的情感。
         </p>
       </div>
     </div>
-    <div id="footer-row" class="d-flex bg-info justify-content-between align-items-center h-35 w-100"></div>
+    <div id="footer-row" class="d-flex justify-content-between align-items-center h-35 vw-100"></div>
   </div>
 
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
-    integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=='
-    crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
   <script>
     // 產生 24 張牌
     for (let i = 0; i < 24; i++) {
@@ -230,19 +239,20 @@
       ) {
         $(this).removeClass('card-close')
       }
+
       // 如果翻開兩張了
       if ($('.card:not(.card-close)').length === 2) {
         // 如果兩張一樣
         if (
-          $('.card:not(.card-close)').eq(0).attr('data-number') ===
-          $('.card:not(.card-close)').eq(1).attr('data-number')
+          $('.card:not(.card-close)').eq(0).data('number') ===
+          $('.card:not(.card-close)').eq(1).data('number')
         ) {
+          let textNum = $('.card:not(.card-close)').eq(0).data('number')
           $('.card:not(.card-close)').addClass('card-ok')
-          $('.content').hide()
-          $('.content').eq($('data-number')).show()
           //fadeTo(時間,透明度)
           $('.card:not(.card-close)').fadeTo(1000, 0)
-          
+          $(`.p-4`).css('display', 'none');
+          $(`.content${textNum}`).css('display', 'block')
         }
 
         // setTimeout(執行的function,延遲時間)
