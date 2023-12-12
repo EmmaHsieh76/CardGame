@@ -90,11 +90,11 @@
       margin: 15px auto;
     }
 
-    #middle h3:not(.c){
+    #middle h3:not(.c) {
       text-align: left;
       padding: 0 30px;
     }
-   
+
 
     .text {
       display: none;
@@ -239,21 +239,21 @@
 
 
     // 打亂 #top-row 的牌
-    // if ($('#top-row .card').length === 12) {
-    //   for (let i = 0; i < 20; i++) {
-    //     const randomA = Math.round(Math.random() * 11)
-    //     const randomB = Math.round(Math.random() * 11)
-    //     $('#top-row .card').eq(randomA).insertAfter($('#top-row .card').eq(randomB))
-    //   }
-    // }
+    if ($('#top-row .card').length === 12) {
+      for (let i = 0; i < 20; i++) {
+        const randomA = Math.round(Math.random() * 11)
+        const randomB = Math.round(Math.random() * 11)
+        $('#top-row .card').eq(randomA).insertAfter($('#top-row .card').eq(randomB))
+      }
+    }
     // 打亂 #footer-row 的牌
-    // if ($('#footer-row .card').length === 12) {
-    //   for (let i = 0; i < 20; i++) {
-    //     const randomA = Math.round(Math.random() * 11)
-    //     const randomB = Math.round(Math.random() * 11)
-    //     $('#footer-row .card').eq(randomA).insertAfter($('#footer-row .card').eq(randomB))
-    //   }
-    // }
+    if ($('#footer-row .card').length === 12) {
+      for (let i = 0; i < 20; i++) {
+        const randomA = Math.round(Math.random() * 11)
+        const randomB = Math.round(Math.random() * 11)
+        $('#footer-row .card').eq(randomA).insertAfter($('#footer-row .card').eq(randomB))
+      }
+    }
 
 
     // 翻牌
@@ -293,12 +293,12 @@
           if ($('.card-ok').length === $('.card').length) {
             $('.card:not(.card-close)').fadeTo(1000, 0)
             $('.text').css('display', 'none');
-            $('.content13').css('display', 'block')
+            $('.content13').css('display', 'block');
             setTimeout(function () {
               alert('過關')
             }, 2000)
           }
-        }, 500)
+        }, 700)
       }
     })
 
