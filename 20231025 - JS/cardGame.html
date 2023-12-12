@@ -238,21 +238,21 @@
 
 
     // 打亂 #top-row 的牌
-    if ($('#top-row .card').length === 12) {
-      for (let i = 0; i < 20; i++) {
-        const randomA = Math.round(Math.random() * 11)
-        const randomB = Math.round(Math.random() * 11)
-        $('#top-row .card').eq(randomA).insertAfter($('#top-row .card').eq(randomB))
-      }
-    }
+    // if ($('#top-row .card').length === 12) {
+    //   for (let i = 0; i < 20; i++) {
+    //     const randomA = Math.round(Math.random() * 11)
+    //     const randomB = Math.round(Math.random() * 11)
+    //     $('#top-row .card').eq(randomA).insertAfter($('#top-row .card').eq(randomB))
+    //   }
+    // }
     // 打亂 #footer-row 的牌
-    if ($('#footer-row .card').length === 12) {
-      for (let i = 0; i < 20; i++) {
-        const randomA = Math.round(Math.random() * 11)
-        const randomB = Math.round(Math.random() * 11)
-        $('#footer-row .card').eq(randomA).insertAfter($('#footer-row .card').eq(randomB))
-      }
-    }
+    // if ($('#footer-row .card').length === 12) {
+    //   for (let i = 0; i < 20; i++) {
+    //     const randomA = Math.round(Math.random() * 11)
+    //     const randomB = Math.round(Math.random() * 11)
+    //     $('#footer-row .card').eq(randomA).insertAfter($('#footer-row .card').eq(randomB))
+    //   }
+    // }
 
 
     // 翻牌
@@ -291,7 +291,10 @@
           // 過關斬將
           if ($('.card-ok').length === $('.card').length) {
             $('.card:not(.card-close)').fadeTo(1000, 0)
-            alert('過關')
+            $('.text').css('display', 'none');
+            setTimeout(function () {
+              alert('過關')
+            }, 2000)
           }
         }, 500)
       }
